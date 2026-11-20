@@ -301,7 +301,15 @@ footer{background:rgba(8,11,19,.9)}
 @media(max-width:900px){.qrcard{position:relative;right:auto;margin:-60px auto 0;animation:none}.paywrap{padding-bottom:0}}
 @media (prefers-reduced-motion:reduce){.qrcard{animation:none}}
 @media(max-width:600px){header .btn{padding:.55rem .75rem;font-size:.6rem;letter-spacing:.08em;white-space:nowrap}header .logo{height:38px}.nav{height:66px}}
-</style>
+.card .ic.emb{width:68px;height:68px;border:none;padding:0;margin-bottom:1.2rem}.card .ic.emb img{width:100%;height:100%;display:block;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+#reels .reelrow{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:18px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+#reels figure{margin:0;scroll-snap-align:start;background:var(--ink);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+#reels video{width:100%;aspect-ratio:9/16;display:block;background:#070b13;object-fit:cover}
+#reels figcaption{display:flex;align-items:center;gap:10px;padding:.8rem 1rem;font-family:var(--serif);font-size:1.1rem;color:#f4efe5}
+#reels figcaption img{width:30px;height:30px}
+#reels .note{color:var(--muted);font-size:.85rem;margin-top:.6rem}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6rem}
+.featlist i.emb{background:none;border:none;padding:0;width:40px;height:40px;flex:none}.featlist i.emb img{width:100%;height:100%;display:block}</style>
 </head>
 <body>
 
@@ -351,15 +359,27 @@ footer{background:rgba(8,11,19,.9)}
     <h2 class="reveal">Seven services. One login.</h2>
     <p class="lead reveal">Most people juggle a bank app, a payment app, a credit provider, a trading app, a crypto wallet, a card machine and a solicitor's portal. Clavindish is designed to bring all of it under one roof.</p>
     <div class="grid g4">
-      <div class="card reveal"><div class="ic">£</div><h3>Digital account</h3><p>One-app balances and banking, with a choice of embedded banking options from regulated partners.</p><ul><li>Multiple banking options</li><li>Personal &amp; business</li></ul></div>
-      <div class="card reveal"><div class="ic">⇄</div><h3>Pay now</h3><p>Pay by bank over open banking: instant, card-free and lower cost for merchants.</p><ul><li>Instant bank transfers</li><li>No card details shared</li></ul></div>
-      <div class="card reveal"><div class="ic">◷</div><h3>Pay later</h3><p>Klarna-style buy now, pay later, split into clear instalments with affordability checks.</p><ul><li>Split in 3, 4 or 6</li><li>Clear repayment schedule</li></ul></div>
-      <div class="card reveal"><div class="ic">▲</div><h3>Shares</h3><p>Share investing from the same account, with IPO watch and a clear portfolio view.</p><ul><li>Fractional access</li><li>IPO watch</li></ul></div>
-      <div class="card reveal"><div class="ic">◈</div><h3>Crypto</h3><p>A Revolut-style feature to buy, hold and track digital assets beside your money.</p><ul><li>Major digital assets</li><li>Custody via partners</li></ul></div>
-      <div class="card reveal"><div class="ic">⌂</div><h3>Property</h3><p>Open-banking property tech for conveyancing, exchange and completion in one tracked flow.</p><ul><li>Verified proof of funds</li><li>Exchange &amp; completion</li></ul></div>
-      <div class="card reveal"><div class="ic">▦</div><h3>Card terminal</h3><p>Take payments by link or QR, or load a Clavindish access code onto an unused card terminal.</p><ul><li>Payment links &amp; QR</li><li>Terminal access code</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-account.svg" alt=""></div><h3>Digital account</h3><p>One-app balances and banking, with a choice of embedded banking options from regulated partners.</p><ul><li>Multiple banking options</li><li>Personal &amp; business</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-paynow.svg" alt=""></div><h3>Pay now</h3><p>Pay by bank over open banking. Add a payee once with their name, sort code and account number, then pay straight from your account.</p><ul><li>Name checked with their bank</li><li>Arrives in seconds</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-paylater.svg" alt=""></div><h3>Pay later</h3><p>Klarna-style buy now, pay later, split into clear instalments with affordability checks.</p><ul><li>Split in 3, 4 or 6</li><li>Clear repayment schedule</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-shares.svg" alt=""></div><h3>Shares &amp; IPOs</h3><p>Share investing from the same account, with IPO watch and a clear portfolio view.</p><ul><li>Fractional access</li><li>IPO watch</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-crypto.svg" alt=""></div><h3>Crypto</h3><p>A Revolut-style feature to buy, hold and track digital assets beside your money.</p><ul><li>Major digital assets</li><li>Custody via partners</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-property.svg" alt=""></div><h3>Property</h3><p>Open-banking property tech for conveyancing, exchange and completion in one tracked flow.</p><ul><li>Verified proof of funds</li><li>Exchange &amp; completion</li></ul></div>
+      <div class="card reveal"><div class="ic emb"><img src="emblem-business.svg" alt=""></div><h3>Business payments</h3><p>Take payments by link or QR, or load a Clavindish access code onto an unused card terminal.</p><ul><li>Payment links &amp; QR</li><li>Terminal access code</li></ul></div>
       <div class="card reveal cardcta"><div class="ic">✦</div><h3>All in one app</h3><p>Every service shares one login, one balance and one place for notifications.</p><a href="#app" class="btn ghost" style="margin-top:1.4rem">See the app</a></div>
     </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section id="reels">
+  <div class="wrap">
+    <div class="eyebrow reveal">02 · See it in action</div>
+    <h2 class="reveal">Every service, in under 30 seconds.</h2>
+    <p class="lead reveal">Short walkthroughs of the Clavindish app, one per service. Tap any reel to play it, or try the interactive prototype yourself.</p>
+    <div class="reelrow"><figure class="reveal"><video src="clavindish-1-brand.mp4" poster="clavindish-1-brand.jpg" preload="none" controls playsinline loop></video><figcaption><img src="logo.svg" alt="" style="width:56px;height:auto"><span>The hub</span></figcaption></figure><figure class="reveal"><video src="clavindish-2-account.mp4" poster="clavindish-2-account.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-account.svg" alt=""><span>Digital account</span></figcaption></figure><figure class="reveal"><video src="clavindish-3-paynow.mp4" poster="clavindish-3-paynow.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-paynow.svg" alt=""><span>Pay now</span></figcaption></figure><figure class="reveal"><video src="clavindish-4-paylater.mp4" poster="clavindish-4-paylater.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-paylater.svg" alt=""><span>Pay later</span></figcaption></figure><figure class="reveal"><video src="clavindish-5-shares.mp4" poster="clavindish-5-shares.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-shares.svg" alt=""><span>Shares &amp; IPOs</span></figcaption></figure><figure class="reveal"><video src="clavindish-6-crypto.mp4" poster="clavindish-6-crypto.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-crypto.svg" alt=""><span>Crypto</span></figcaption></figure><figure class="reveal"><video src="clavindish-7-property.mp4" poster="clavindish-7-property.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-property.svg" alt=""><span>Property</span></figcaption></figure><figure class="reveal"><video src="clavindish-8-business.mp4" poster="clavindish-8-business.jpg" preload="none" controls playsinline loop></video><figcaption><img src="emblem-business.svg" alt=""><span>Business payments</span></figcaption></figure></div>
+    <div class="btnrow reveal"><a href="app.html" target="_blank" rel="noopener" class="btn">Try the app prototype</a></div>
+    <p class="note reveal">Concept in development</p>
   </div>
 </section>
 
@@ -367,19 +387,20 @@ footer{background:rgba(8,11,19,.9)}
 <section class="band" id="app">
   <div class="wrap split">
     <div>
-      <div class="eyebrow reveal">02 · The App</div>
+      <div class="eyebrow reveal">03 · The App</div>
       <h2 class="reveal">Every service, one notification away.</h2>
       <p class="lead reveal">A first look at the Clavindish app. Each part of the hub keeps customers informed with a short, clear notification, all from one app and one login.</p>
       <ul class="featlist reveal" id="featlist">
-<li data-i="0"><i>£</i><div><b>Digital account</b><span>Salary of £4,250.00 received into your Everyday account.</span></div></li>
-<li data-i="1"><i>⇄</i><div><b>Pay now</b><span>£48.00 paid instantly to The Ivy, Chelsea by bank.</span></div></li>
-<li data-i="2"><i>◷</i><div><b>Pay later</b><span>Reminder: £62.50 instalment for Tailoring is due Tuesday.</span></div></li>
-<li data-i="3"><i>▲</i><div><b>Shares</b><span>Global Tech ETF is up 3.1% this week. A fintech IPO opens 3 Dec.</span></div></li>
-<li data-i="4"><i>◈</i><div><b>Crypto</b><span>Bitcoin has moved 1.2% in 24 hours. Tap to see your holdings.</span></div></li>
-<li data-i="5"><i>⌂</i><div><b>Property</b><span>Searches complete for 14 Onslow Gardens. Next: mortgage offer.</span></div></li>
-<li data-i="6"><i>▦</i><div><b>Card terminal</b><span>£3,482.20 taken today across 64 payments and settled.</span></div></li>
+<li data-i="0"><i class="emb"><img src="emblem-account.svg" alt=""></i><div><b>Digital account</b><span>Salary of £4,250.00 received into your Everyday account.</span></div></li>
+<li data-i="1"><i class="emb"><img src="emblem-paynow.svg" alt=""></i><div><b>Pay now</b><span>£48.00 paid instantly to Marlowe Brasserie by bank.</span></div></li>
+<li data-i="2"><i class="emb"><img src="emblem-paylater.svg" alt=""></i><div><b>Pay later</b><span>Reminder: £62.50 instalment for Tailoring is due Tuesday.</span></div></li>
+<li data-i="3"><i class="emb"><img src="emblem-shares.svg" alt=""></i><div><b>Shares &amp; IPOs</b><span>Global Tech ETF is up 3.1% this week. A fintech IPO opens 3 Dec.</span></div></li>
+<li data-i="4"><i class="emb"><img src="emblem-crypto.svg" alt=""></i><div><b>Crypto</b><span>Bitcoin has moved 1.2% in 24 hours. Tap to see your holdings.</span></div></li>
+<li data-i="5"><i class="emb"><img src="emblem-property.svg" alt=""></i><div><b>Property</b><span>Searches complete for 14 Onslow Gardens. Next: mortgage offer.</span></div></li>
+<li data-i="6"><i class="emb"><img src="emblem-business.svg" alt=""></i><div><b>Business payments</b><span>£3,482.20 taken today across 64 payments and settled.</span></div></li>
       </ul>
       <p class="src reveal">Illustrative concept. Names and figures are examples only.</p>
+      <div class="btnrow reveal"><a href="app.html" target="_blank" rel="noopener" class="btn">Try the app prototype</a><a href="#reels" class="btn ghost">Watch the reels</a></div>
     </div>
     <div class="reveal">
       <div class="phone lockphone"><div class="screen lock">
@@ -387,7 +408,7 @@ footer{background:rgba(8,11,19,.9)}
         <div class="lockclock"><small>Thursday 19 November</small><b>9:41</b></div>
         <div class="lockstack" id="lockstack">
 <div class="ln" data-i="0"><div class="nlogo">C</div><div class="lt"><b><i>£</i>Digital account</b><span>Salary of £4,250.00 received into your Everyday account.</span></div><em>now</em></div>
-<div class="ln" data-i="1"><div class="nlogo">C</div><div class="lt"><b><i>⇄</i>Pay now</b><span>£48.00 paid instantly to The Ivy, Chelsea by bank.</span></div><em>2m ago</em></div>
+<div class="ln" data-i="1"><div class="nlogo">C</div><div class="lt"><b><i>⇄</i>Pay now</b><span>£48.00 paid instantly to Marlowe Brasserie by bank.</span></div><em>2m ago</em></div>
 <div class="ln" data-i="2"><div class="nlogo">C</div><div class="lt"><b><i>◷</i>Pay later</b><span>Reminder: £62.50 instalment for Tailoring is due Tuesday.</span></div><em>15m ago</em></div>
 <div class="ln" data-i="3"><div class="nlogo">C</div><div class="lt"><b><i>▲</i>Shares</b><span>Global Tech ETF is up 3.1% this week. A fintech IPO opens 3 Dec.</span></div><em>32m ago</em></div>
 <div class="ln" data-i="4"><div class="nlogo">C</div><div class="lt"><b><i>◈</i>Crypto</b><span>Bitcoin has moved 1.2% in 24 hours. Tap to see your holdings.</span></div><em>1h ago</em></div>
@@ -407,7 +428,7 @@ footer{background:rgba(8,11,19,.9)}
 <section id="terminal">
   <div class="wrap split">
     <div>
-      <div class="eyebrow reveal">03 · For Merchants</div>
+      <div class="eyebrow reveal">04 · For Merchants</div>
       <h2 class="reveal">Every business, a payment point.</h2>
       <p class="lead reveal">The Clavindish card terminal feature lets businesses take payments straight from the app — or turn an unused card terminal into a Clavindish point of sale.</p>
       <div class="paywrap reveal">
@@ -416,7 +437,7 @@ footer{background:rgba(8,11,19,.9)}
           <div class="qrhead"><img src="logo.svg" alt="Clavindish Group" class="qrlogo"><span>PAY</span></div>
           <img src="clavindish-qr.svg" alt="Clavindish branded QR code" class="qrimg">
           <b>Scan to pay</b>
-          <small>Pay instantly by bank. No card needed.</small>
+          <small>Scan, then approve in your banking app.</small>
         </div>
       </div>
     </div>
@@ -432,7 +453,7 @@ footer{background:rgba(8,11,19,.9)}
 <!-- PROPERTY -->
 <section class="band" id="property">
   <div class="wrap">
-    <div class="eyebrow reveal">04 · Property Tech</div>
+    <div class="eyebrow reveal">05 · Property Tech</div>
     <h2 class="reveal">Conveyancing without the chase.</h2>
     <p class="lead reveal">Open banking can verify funds, reduce payment fraud and give buyers, sellers and solicitors one shared view of a transaction.</p>
     <div class="grid g4">
@@ -447,7 +468,7 @@ footer{background:rgba(8,11,19,.9)}
 <!-- MARKET -->
 <section id="market">
   <div class="wrap">
-    <div class="eyebrow reveal">05 · Market in numbers</div>
+    <div class="eyebrow reveal">06 · Market in numbers</div>
     <h2 class="reveal">Finance is changing shape.</h2>
     <p class="lead reveal">Global fintech investment rebounded strongly in the first half of 2026, with payments leading the way — the core of what Clavindish is building.</p>
     <div class="stats">
@@ -472,7 +493,7 @@ footer{background:rgba(8,11,19,.9)}
 <section class="band" id="compliance">
   <div class="wrap split">
     <div>
-      <div class="eyebrow reveal">06 · Regulation</div>
+      <div class="eyebrow reveal">07 · Regulation</div>
       <h2 class="reveal">Built on regulated foundations.</h2>
       <p class="lead reveal">Rather than holding its own licence at launch, Clavindish intends to deliver regulated services through FCA-authorised partner and principal firms — so each product sits inside the UK regulatory framework from day one.</p>
     </div>
@@ -488,7 +509,7 @@ footer{background:rgba(8,11,19,.9)}
 <!-- INVESTORS -->
 <section id="investors">
   <div class="wrap">
-    <div class="eyebrow reveal">07 · Investors</div>
+    <div class="eyebrow reveal">08 · Investors</div>
     <h2 class="reveal">The case for a single hub.</h2>
     <p class="lead reveal">Clavindish is opening conversations with investors and partners. We are happy to walk interested parties through the prototype, the product roadmap and the partner model.</p>
     <div class="grid g4">
@@ -507,7 +528,7 @@ footer{background:rgba(8,11,19,.9)}
 <section class="band" id="insights">
   <div class="wrap split">
     <div>
-      <div class="eyebrow reveal">08 · Insights</div>
+      <div class="eyebrow reveal">09 · Insights</div>
       <h2 class="reveal">The Clavindish Brief.</h2>
       <p class="lead reveal">A newsletter on fintech and IPOs — funding rounds, listings, regulation and what it means for investors and the real economy. Calm, evidence-led, no hype.</p>
       <form class="news" id="newsForm">
@@ -530,7 +551,7 @@ footer{background:rgba(8,11,19,.9)}
   <div class="wrap founder">
     <div class="portrait reveal"><b>LK</b><span class="eyebrow motif" style="justify-content:center">Clavindish</span></div>
     <div>
-      <div class="eyebrow reveal">09 · Leadership</div>
+      <div class="eyebrow reveal">10 · Leadership</div>
       <div class="sig reveal">Laurence Kerin</div>
       <div class="role reveal">Founder · Clavindish Group</div>
       <p class="lead reveal" style="margin-top:1.6rem">Laurence Kerin runs Clavindish Group and is building it as a stand-alone fintech hub: one place to bank, pay now, pay later, invest in shares and crypto, take merchant payments and complete property transactions over open banking.</p>
@@ -547,7 +568,7 @@ footer{background:rgba(8,11,19,.9)}
 <section id="callback">
   <div class="wrap split">
     <div>
-      <div class="eyebrow reveal">10 · Contact</div>
+      <div class="eyebrow reveal">11 · Contact</div>
       <h2 class="reveal">Speak to Clavindish.</h2>
       <p class="lead reveal">Investors, partners, merchants and press — leave your details and we'll call you back at a time that suits you.</p>
       <div style="margin-top:2.2rem;display:grid;gap:1rem;font-size:1rem" class="reveal">
