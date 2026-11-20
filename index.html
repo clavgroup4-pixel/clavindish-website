@@ -287,6 +287,20 @@ footer{background:rgba(8,11,19,.9)}
 .featlist li.on i{background:rgba(201,169,110,.15);border-color:var(--rose)}
 .featlist li:hover b,.featlist li.on b{color:var(--gold2)}
 @media (prefers-reduced-motion:reduce){.ln{opacity:1;transform:none}}
+
+.paywrap{position:relative;margin-top:2.4rem;padding-bottom:40px}
+.paywrap .photo{margin-top:0}
+.qrcard{position:absolute;right:-28px;bottom:0;width:210px;background:linear-gradient(180deg,#141d2f,#0a0f1a);border:1px solid rgba(201,169,110,.45);border-radius:18px;padding:16px 16px 14px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,.55);animation:qrfloat 6s ease-in-out infinite}
+@keyframes qrfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.qrhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.qrlogo{height:30px;width:auto}
+.qrhead span{font-size:.6rem;letter-spacing:.3em;color:var(--gold2);border:1px solid var(--line);padding:3px 7px;border-radius:20px}
+.qrimg{width:100%;height:auto;display:block;border-radius:10px}
+.qrcard b{display:block;font-family:var(--serif);font-size:1.25rem;color:#f4efe5;margin-top:10px;font-weight:600}
+.qrcard small{display:block;font-size:.68rem;color:var(--muted);line-height:1.4}
+@media(max-width:900px){.qrcard{position:relative;right:auto;margin:-60px auto 0;animation:none}.paywrap{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){.qrcard{animation:none}}
+@media(max-width:600px){header .btn{padding:.55rem .75rem;font-size:.6rem;letter-spacing:.08em;white-space:nowrap}header .logo{height:38px}.nav{height:66px}}
 </style>
 </head>
 <body>
@@ -396,7 +410,15 @@ footer{background:rgba(8,11,19,.9)}
       <div class="eyebrow reveal">03 · For Merchants</div>
       <h2 class="reveal">Every business, a payment point.</h2>
       <p class="lead reveal">The Clavindish card terminal feature lets businesses take payments straight from the app — or turn an unused card terminal into a Clavindish point of sale.</p>
-      <figure class="photo reveal"><img src="cafe.jpg" alt="Customer paying at a London café counter"><figcaption>Pay by bank · tap · QR</figcaption></figure>
+      <div class="paywrap reveal">
+        <figure class="photo"><img src="cafe.jpg" alt="Customer paying at a London café counter"><figcaption>Pay by bank · tap · QR</figcaption></figure>
+        <div class="qrcard">
+          <div class="qrhead"><img src="logo.svg" alt="Clavindish Group" class="qrlogo"><span>PAY</span></div>
+          <img src="clavindish-qr.svg" alt="Clavindish branded QR code" class="qrimg">
+          <b>Scan to pay</b>
+          <small>Pay instantly by bank. No card needed.</small>
+        </div>
+      </div>
     </div>
     <div class="steps">
       <div class="step reveal"><div><h4>Payment link</h4><p>Generate and send a link in seconds; customers pay by bank or card.</p></div></div>
