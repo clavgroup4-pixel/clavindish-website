@@ -691,5 +691,6 @@ done('cbForm','cbOk');done('newsForm','newsOk');
 document.querySelectorAll('.svctabs button').forEach(b=>b.addEventListener('click',()=>openSvc(b.dataset.svc,false)));
 document.querySelectorAll('[data-open]').forEach(c=>{c.addEventListener('click',()=>openSvc(c.dataset.open,true));c.addEventListener('keydown',e=>{if(e.key==='Enter')openSvc(c.dataset.open,true)});});})();
 </script>
+<script src="highlevel-lead-form.js" defer></script>
 </body>
 </html>
